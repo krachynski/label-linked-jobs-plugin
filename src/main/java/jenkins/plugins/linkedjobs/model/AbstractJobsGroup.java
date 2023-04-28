@@ -90,4 +90,8 @@ public abstract class AbstractJobsGroup {
     public boolean getHasMoreThanOneJob() {
         return (jobs.size() + triggeredJobs.size() + jobsWithLabelDefaultValue.size()) > 1;
     }
+
+    public boolean getHasPluralJobs() {
+        return (jobs.size() + triggeredJobs.size() + jobsWithLabelDefaultValue.size()) != 1;
+    }
 }

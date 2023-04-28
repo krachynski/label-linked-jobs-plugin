@@ -105,7 +105,7 @@ THE SOFTWARE.
           <j:otherwise>
             The following job(s) can run only on this node because of label (mis-)configuration, so you may have trouble if it goes down.
             <j:forEach var="group" items="${exclusiveGroups}">
-              <h3>Job<j:if test="${group.hasMoreThanOneJob}">s</j:if> configured with <a href="${rootURL}/${group.labelURL}">${group.label}</a></h3>
+              <h3>Job<j:if test="${group.hasPluralJobs}">s</j:if> configured with <a href="${rootURL}/${group.labelURL}">${group.label}</a></h3>
               
               <j:if test="${it.detailedView  &amp;&amp; !empty(group.jobs)}">
                 <t:projectView jobs="${group.jobs}"/>

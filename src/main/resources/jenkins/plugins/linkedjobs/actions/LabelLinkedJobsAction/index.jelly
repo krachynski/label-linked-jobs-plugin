@@ -51,7 +51,7 @@ THE SOFTWARE.
 
       <j:if test="${it.getSize(clouds) > 0}">
           <div>
-            Provisioning cloud<j:if test="${it.getSize(clouds) > 1}">s</j:if>:
+            Provisioning cloud<j:if test="${it.getSize(clouds) != 1}">s</j:if>:
             <j:forEach var="cloud" items="${clouds}" varStatus="loopStatus">
               ${cloud.displayName}<j:if test="${!loopStatus.last}">,&#160;</j:if>
             </j:forEach>
